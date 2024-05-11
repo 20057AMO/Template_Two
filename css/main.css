@@ -29,8 +29,8 @@
     margin-left: auto;
     margin-right: auto;
   }
-  /* Small */
-  @media (min-width: 768px) {
+ /* Small */
+@media (min-width: 768px) {
     .container {
       width: 750px;
     }
@@ -88,6 +88,8 @@
 }
 .main-heading p{
     width: 550px;
+    width: 100%;
+    overflow: hidden; 
     margin: 0 auto 100px;
     line-height: 2;
     color: #777;
@@ -480,11 +482,14 @@ nav .form i:hover{
     text-transform: uppercase;
     transition: 0.3s;
 }
-.portfolio .more:hover{
-    background-color: transparent;
-    color: var(--main-color);
-    padding: 30px 20px;
+@media (min-width: 1200px){
+    .portfolio .more:hover{
+        background-color: transparent;
+        color: var(--main-color);
+        padding: 30px 20px;
+    }
 }
+
 /* End Portfolio   */
 /* Start Video Section  */
 .video{
@@ -986,6 +991,11 @@ nav .form i:hover{
     margin-left: auto;
     cursor: pointer;
     text-transform: uppercase;
+    transition: var(--transition-timing);
+}
+.contact .content form input[type="submit"]:hover{
+    border-radius: 10px;
+    color: #ccc;
 }
 .contact .content .info{
     flex-basis:  25%;
